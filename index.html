@@ -43,8 +43,8 @@
 <script>
 
     function calculate() {
-        let percent = parseInt(document.getElementById("percent").value);
-        let pbConsumption = parseInt(document.getElementById("consumption").value);
+        let percent = parseFloat(document.getElementById("percent").value);
+        let pbConsumption = parseFloat(document.getElementById("consumption").value);
         let lpgConsumption = pbConsumption + (pbConsumption * (percent/100));
         let rangeCalc = 4300 / (pbConsumption + (pbConsumption * (percent/100)));
 
