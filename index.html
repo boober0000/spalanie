@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <title>Spalanie LPG</title>
+</head>
+<body>
+    
+    <div id="container">
+        <table>
+            <tr>
+                <td><a>procent więcej na LPG</a></td>
+                <td><input id="percent" type="number" value="22"/></td>
+            </tr>
+            <tr>
+                <td><a>spalanie z komputera</a></td>
+                <td><input id="consumption" type="number" placeholder=""/></td>
+            </tr>
+            <tr>
+                <td>spalanie LPG</td>
+                <td><a id="summary"></a></td>
+            </tr>
+            <tr>
+                <td>zasięg</td>
+                <td><a id="range"></a></td>
+            </tr>
+        </table>
+       
+        
+<button id="button" onclick="calculate()">oblicz</button>
+
+
+
+<script>
+
+    function calculate() {
+        let percent = parseInt(document.getElementById("percent").value);
+        let pbConsumption = parseInt(document.getElementById("consumption").value);
+        let lpgConsumption = pbConsumption + (pbConsumption * (percent/100));
+        let rangeCalc = 4300 / (pbConsumption + (pbConsumption * (percent/100)));
+
+        document.getElementById("summary").innerHTML = lpgConsumption.toFixed(1);
+        document.getElementById("range").innerHTML = rangeCalc.toFixed(1);
+    }
+
+
+
+
+</script>
+
+    </div>
+</body>
+</html>
