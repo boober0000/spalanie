@@ -3,14 +3,20 @@ body {
     font-size: 17px;
        }
 
+#tab {
+    width: 100%;
+    text-align: left;
+}
+
 #container {
     color: white;
-    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%) );   
+    background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
     width: 250px;
     height: 180px;
-    padding: 15px 8px;
+    padding: 15px 9px;
     border-radius: 20px;
     margin: 1% auto;
+    text-align: center;
    }
 
 
@@ -21,19 +27,28 @@ input {
     color: white;
     border-style: none;
     border-radius: 20px;
-    padding-left: 10px;
-    
+    padding-left: 10px;    
    }
    
 #button {
     margin-top: 10px;
-    width: 100%;
+    width: 82%;
     height: 30px;
     font-size: 17px;
     border-radius: 20px;
-    border-style: none;
-   
+    border-style: none;   
 }
+
+#button1 {
+    margin-top: 10px;
+    width: 12%;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 20px;
+    border-style: none; 
+
+}
+
 
 #summary, #range {
     color: gold;
@@ -42,6 +57,11 @@ input {
 
 #logo {
     width: 150px;
-    margin-left: 50px;
+    
+}
+
+
+.row.hidden {
+    display: none;
 }
 

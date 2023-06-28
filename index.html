@@ -16,14 +16,14 @@
     
     <div id="container">
         <img id="logo" src="graph/honda.png"/>
-        <table>
-            <tr>
+        <table id="tab">
+            <tr id="percentRow" class="row hidden">
                 <td><a>procent więcej na LPG</a></td>
                 <td><input id="percent" type="number" value="22"/></td>
             </tr>
             <tr>
                 <td><a>spalanie z komputera</a></td>
-                <td><input id="consumption" type="number" placeholder=""/></td>
+                <td><input id="consumption" type="number" placeholder="" autofocus/></td>
             </tr>
             <tr>
                 <td>spalanie LPG</td>
@@ -37,26 +37,39 @@
        
         
 <button id="button" onclick="calculate()">oblicz</button>
+<button id="button1" onclick="hide()">...</button>
 
+</div>
 
 
 <script>
+       
+       
 
-    function calculate() {
-        let percent = parseFloat(document.getElementById("percent").value);
-        let pbConsumption = parseFloat(document.getElementById("consumption").value);
-        let lpgConsumption = pbConsumption + (pbConsumption * (percent/100));
-        let rangeCalc = 4300 / (pbConsumption + (pbConsumption * (percent/100)));
+        function calculate() {
+            let percent = parseFloat(document.getElementById("percent").value);
+            let pbConsumption = parseFloat(document.getElementById("consumption").value);
+            let lpgConsumption = pbConsumption + (pbConsumption * (percent/100));
+            let rangeCalc = 4300 / (pbConsumption + (pbConsumption * (percent/100)));
 
-        document.getElementById("summary").innerHTML = lpgConsumption.toFixed(1);
-        document.getElementById("range").innerHTML = rangeCalc.toFixed(1);
+            document.getElementById("summary").innerHTML = lpgConsumption.toFixed(1);
+            document.getElementById("range").innerHTML = rangeCalc.toFixed(1);
     }
 
+
+    function hide() {
+            if (document.querySelector (".hidden")) {
+            percentRow.classList.remove ("hidden")} else {
+            percentRow.classList.add("hidden");
+            }
+           
+    }   
+    
 
 
 
 </script>
 
-    </div>
+    
 </body>
 </html>
