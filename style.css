@@ -23,10 +23,10 @@ body {
 input {
     width: 45px;
     font-size: 17px;
-    background-color: grey;
+    background-color:#ec1c24;
     color: white;
     border-style: none;
-    border-radius: 20px;
+    border-radius: 10px;
     padding-left: 10px;    
    }
    
