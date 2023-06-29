@@ -1,18 +1,26 @@
 body {
     font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 17px;
+    font-size: 25px;
        }
+
+td {
+    padding-bottom: 20px;
+}
 
 #tab {
     width: 100%;
-    text-align: left;
+    /* text-align: left; */
+    margin-bottom: 15px;
 }
+
+
+
 
 #container {
     color: white;
     background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
-    width: 250px;
-    height: 180px;
+    width: 300px;
+    height: 340px;
     padding: 15px 9px;
     border-radius: 20px;
     margin: 1% auto;
@@ -20,9 +28,10 @@ body {
    }
 
 
+
 input {
-    width: 45px;
-    font-size: 17px;
+    width: 80px;
+    font-size: 40px;
     background-color:#ec1c24;
     color: white;
     border-style: none;
@@ -31,19 +40,19 @@ input {
    }
    
 #button {
-    margin-top: 10px;
+    
     width: 82%;
-    height: 30px;
-    font-size: 17px;
+    height: 40px;
+    font-size: 30px;
     border-radius: 20px;
     border-style: none;   
 }
 
 #button1 {
-    margin-top: 10px;
-    width: 12%;
-    height: 30px;
-    font-size: 17px;
+    
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
     border-radius: 20px;
     border-style: none; 
 
@@ -52,11 +61,13 @@ input {
 
 #summary, #range {
     color: gold;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 #logo {
-    width: 150px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     
 }
 

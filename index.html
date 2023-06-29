@@ -14,19 +14,24 @@
 </head>
 <body>
     
-    <div id="container">
+    <div  id="container">
         <img id="logo" src="graph/honda1.png"/>
         <table id="tab">
+
+            <tr id="tankRow" class="row hidden">
+                <td><a>poj. zbiornika</a></td>
+                <td><input id="tank" type="number" value="43"/></td>
+            </tr>
             <tr id="percentRow" class="row hidden">
-                <td><a>procent więcej na LPG</a></td>
+                <td><a>% LPG > PB</a></td>
                 <td><input id="percent" type="number" value="22"/></td>
             </tr>
             <tr>
-                <td><a>spalanie z komputera</a></td>
+                <td><a>śr. zużycie PB</a></td>
                 <td><input id="consumption" type="number" placeholder="" autofocus/></td>
             </tr>
             <tr>
-                <td>spalanie LPG</td>
+                <td>zużycie LPG</td>
                 <td><a id="summary"></a></td>
             </tr>
             <tr>
@@ -44,13 +49,15 @@
 
 <script>
        
-       
+       let container = document.querySelector(".container hidden");
 
         function calculate() {
+            
+            let tank = parseFloat(document.getElementById("tank").value);
             let percent = parseFloat(document.getElementById("percent").value);
             let pbConsumption = parseFloat(document.getElementById("consumption").value);
             let lpgConsumption = pbConsumption + (pbConsumption * (percent/100));
-            let rangeCalc = 4300 / (pbConsumption + (pbConsumption * (percent/100)));
+            let rangeCalc = (tank * 100) / (pbConsumption + (pbConsumption * (percent/100)));
 
             document.getElementById("summary").innerHTML = lpgConsumption.toFixed(1);
             document.getElementById("range").innerHTML = rangeCalc.toFixed(1);
@@ -59,9 +66,14 @@
 
     function hide() {
             if (document.querySelector (".hidden")) {
-            percentRow.classList.remove ("hidden")} else {
+            percentRow.classList.remove ("hidden");
+            tankRow.classList.remove ("hidden");
+            document.getElementById("container").setAttribute("style","height:500px");
+                    } else {
             percentRow.classList.add("hidden");
-            }
+            tankRow.classList.add("hidden");
+            document.getElementById("container").setAttribute("style","height:340px");
+                        }
            
     }   
     
